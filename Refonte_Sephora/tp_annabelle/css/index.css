@@ -1,0 +1,830 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column
+}
+
+header h1 {
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    font-family: lato light;
+}
+
+header div.recherche {
+    position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+
+}
+
+header div.recherche input.barre {
+    width: 60%;
+    padding-left: 1em;
+    border-radius: 25px;
+    background-color: #e9e9e9;
+    border: none;
+
+}
+
+header div.recherche input.barre::placeholder {
+    font-family: lato light;
+    letter-spacing: 0.1rem;
+}
+
+div.recherche {
+    position: relative;
+}
+
+span.loupe {
+    position: absolute;
+    right: 19%;
+    top: 35%;
+    scale: 0.6;
+}
+
+
+.icones {
+    padding-top: 1rem;
+    display: flex;
+    float: right;
+}
+
+.icones span {
+    padding-right: 0.5rem;
+
+}
+
+.connexion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: lato light;
+    padding-right: 0.6rem;
+    padding-left: 1.3rem;
+
+}
+
+.connexion p {
+    padding-left: 0.3rem;
+
+}
+
+/******************************* PHOTO **************************/
+.photo {
+    margin-top: 1rem;
+    width: 100%;
+    height: 13rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carreVert {
+
+    justify-content: center;
+    width: 21rem;
+    height: 13rem;
+    background-color: #fffbfe;
+}
+
+.carreVert img {
+    width: 180px;
+    height: 140px;
+    position: relative;
+    left: -15px;
+    top: -10px;
+    z-index: 2;
+}
+
+.carreVert p {
+    width: fit-content;
+}
+
+.carreVert h1 {
+    color: rgb(250, 27, 27);
+    font-size: 4.3rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    z-index: 1;
+    text-shadow: 10px 10px 9px #0000007d;
+    animation: ombre 5s;
+}
+
+@keyframes ombre {
+    from {
+        text-shadow: 3px 3px 5px #0000007d;
+    }
+
+    to {
+        text-shadow: 10px 10px 9px #0000007d;
+    }
+}
+
+.carreVert p {
+    position: relative;
+    top: 40px;
+    right: -130px;
+    font-family: lato light;
+    font-size: 0.6rem;
+}
+
+
+/******************* NOUVEAUTE  ************************/
+.nouveaute {
+    padding-top: 5rem;
+}
+
+.nouveaute h1 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.rectangleRose {
+    background-color: rgb(255, 241, 246);
+    height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carreBlanc1,
+.carreBlanc2 {
+    background-color: #fff;
+    height: 9rem;
+    width: 6rem;
+    margin: 1.3rem;
+    border-radius: 17px;
+    color: #7b7b7b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carreBlanc3,
+.carreBlanc4 {
+    display: none;
+}
+
+.carreBlancCentre {
+    background-color: #fff;
+    height: 12rem;
+    width: 9rem;
+    box-shadow: 1px 9px 12px 5px #00000031;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    color: #7b7b7b;
+    cursor: pointer;
+}
+
+.carreBlancCentre img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50px;
+}
+
+.carreBlancCentre .titre p {
+    font-size: 1rem;
+    position: relative;
+    top: -10px;
+}
+
+.carreBlancCentre .nomProduit p {
+    font-family: lato light;
+    font-size: 0.6rem;
+    position: relative;
+    top: -6px;
+
+
+}
+
+.carreBlancCentre .cout p {
+    font-family: lato;
+    font-size: 0.7rem;
+    position: relative;
+    bottom: -25px;
+
+
+}
+
+.carreBlanc1 img {
+    padding-top: 0.2rem;
+    height: 70px;
+    width: 40px;
+}
+
+.titre1 p {
+    font-size: 0.7rem;
+    position: relative;
+    top: -3px;
+}
+
+.nomProduit1 p {
+    font-family: lato light;
+    font-size: 0.5rem;
+    position: relative;
+    top: -5px;
+    left: 6px;
+    padding: 0.3rem;
+}
+
+.cout1 p {
+    font-family: lato;
+    font-size: 0.6rem;
+    position: relative;
+    bottom: -9px;
+}
+
+.carreBlanc2 img {
+    padding-top: 0.2rem;
+    height: 70px;
+    width: 90px;
+}
+
+/************************* TENDANCES *****************************/
+
+.rectangleRose2 {
+    background-color: rgb(255, 241, 246);
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.tendances {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tendances h1 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+
+}
+
+
+.podium {
+    border-radius: 5px 5px 0 0;
+}
+
+.podium img {
+    border-radius: 10px;
+    border: 1px solid rgb(245, 225, 228);
+}
+
+.podium1 {
+    height: 8rem;
+    width: 6rem;
+    background-color: rgb(183, 28, 28);
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    position: relative;
+}
+
+.podium2 {
+    height: 6rem;
+    width: 6rem;
+    background-color: rgb(183, 28, 28);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.podium3 {
+    height: 5rem;
+    width: 6rem;
+    background-color: rgb(183, 28, 28);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    position: relative;
+}
+
+.podium__rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #ffffff;
+
+}
+
+
+.podium2 img {
+    width: 45px;
+    height: 65px;
+    position: absolute;
+    top: -75%;
+}
+
+.podium1 img {
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: -70%;
+}
+
+.podium3 img {
+    width: 60px;
+    height: 75px;
+    position: absolute;
+    top: -100%;
+}
+
+.podium4 {
+    display: none;
+}
+
+.podium5 {
+    display: none;
+}
+
+/************************ FOOTER ***********************/
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 55vh;
+    background-color: black;
+    color: white;
+    margin-top: 12em;
+}
+
+footer h1 {
+    padding-top: 1rem;
+    font-family: lato hairline;
+    font-size: 3rem;
+    text-align: center;
+}
+
+footer h2 {
+    padding-top: 0.4rem;
+    font-family: lato;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.rechercheFooter {
+    display: flex;
+    justify-content: center;
+}
+
+footer .rechercheFooter .barre {
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    height: 1.4rem;
+    width: 15rem;
+}
+
+footer .rechercheFooter .barre::placeholder {
+    font-family: lato light;
+    letter-spacing: 0.1rem;
+    padding-left: 0.4rem;
+}
+
+footer li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: lato hairline;
+    font-size: small;
+    border-top: 1px solid rgb(255, 255, 255);
+
+}
+
+footer ul {
+    width: 85%;
+}
+
+footer .divFooter {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.annonces {
+    display: none;
+
+}
+
+.publicite h1 {
+    display: none;
+}
+
+
+
+span.icone-btn-burger-fermer {
+    display: none;
+}
+
+label span {
+    padding-left: 2.5%;
+}
+
+
+
+
+
+
+
+.nav-principale {
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    top: 27%;
+    z-index: 31;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 1s;
+    transform: translateX(-100%);
+    padding: 10px;
+
+}
+
+.nav-principale a {
+    color: #fff;
+    text-decoration: none;
+    font-family: lato light;
+    padding: 1rem;
+}
+
+/*icone change lorsque menu ouvert*/
+.material-icons .icone-btn-burger-fermer {
+    display: none;
+}
+
+
+/* translationn du menu */
+#cc-nav-principale:checked~.nav-principale {
+    transform: translateX(0%);
+
+}
+
+#cc-nav-principale:checked~.btn-burger-nav-principale>.icone-btn-burger-ouvrir {
+    display: none;
+}
+
+#cc-nav-principale:checked~.btn-burger-nav-principale>.icone-btn-burger-fermer {
+    display: flex;
+}
+
+/* ENLEVER CASE A COCHER */
+#cc-nav-principale {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*************         ipad et desktop            **********/
+
+@media (min-width:750px) {
+
+
+
+
+    .nav-principale {
+        width: 100%;
+        height: 0.3rem;
+        position: static;
+
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        transition: none;
+        transform: none;
+
+
+    }
+
+    .nav-principale a:hover {
+        text-decoration: underline;
+    }
+
+    .btn-burger-nav-principale {
+
+        display: none;
+    }
+
+    .top {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+    }
+
+    header h1 {
+        text-align: left;
+        padding-left: 0.5rem;
+    }
+
+    header div.recherche {
+        justify-content: center;
+        padding-top: 0rem;
+        height: 1rem;
+    }
+
+    div.recherche {
+        position: relative;
+    }
+
+    span.loupe {
+        position: absolute;
+        right: 19%;
+        top: -23%;
+        scale: 0.6;
+    }
+
+
+
+    .icones {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .icones span {
+        padding-right: 0.5rem;
+
+    }
+
+    .connexion {
+        border-right: 0.1rem solid rgb(43, 43, 43);
+
+    }
+
+    /******************************** BARRE DE NAVIGATION *****************************/
+
+
+
+    .photo {
+        width: 100%;
+        height: 20rem;
+        background-color: rgb(255, 238, 248);
+    }
+
+    .carreVert {
+        width: 32rem;
+        height: 19rem;
+    }
+
+    .carreVert img {
+        width: 340px;
+        height: 240px;
+        left: -60px;
+        top: -40px;
+    }
+
+    .carreVert h1 {
+        font-size: 6rem;
+        top: 30px;
+    }
+
+    .carreVert p {
+        top: 40px;
+        right: -230px;
+        font-size: 0.8rem;
+    }
+
+    /*******************************************************************/
+    .rectangleRose {
+        height: 9%;
+    }
+
+    .carreBlanc3,
+    .carreBlanc4 {
+        background-color: #fff;
+        height: 7rem;
+        width: 6rem;
+        border-radius: 17px;
+        color: #7b7b7b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .carreBlanc3 img {
+        padding-top: 0.5rem;
+        height: 56px;
+        width: 48px;
+        padding-bottom: 0.5rem;
+    }
+
+    .carreBlanc4 img {
+        padding-top: 0.2rem;
+        height: 70px;
+        width: 40px;
+    }
+
+    .titre3 p {
+        font-size: 0.7rem;
+        position: relative;
+        top: -3px;
+    }
+
+    .nomProduit3 p {
+        font-family: lato light;
+        font-size: 0.5rem;
+        position: relative;
+        top: -5px;
+        left: 6px;
+        padding: 0.4rem;
+    }
+
+    .cout3 p {
+        font-family: lato;
+        font-size: 0.6rem;
+        position: relative;
+        bottom: -9px;
+    }
+
+    .nomProduit1 p {
+        padding: 0.4rem;
+    }
+
+    .carreBlanc2 .cout1 p {
+        bottom: -3px;
+    }
+
+    .podium4 {
+        height: 3rem;
+        width: 6rem;
+        background-color: rgb(183, 28, 28);
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        position: relative;
+    }
+
+    .podium5 {
+        height: 2rem;
+        width: 6rem;
+        background-color: rgb(183, 28, 28);
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        position: relative;
+    }
+
+
+    .podium4 img {
+        width: 50px;
+        height: 80px;
+        position: absolute;
+        top: -180%;
+    }
+
+    .podium5 img {
+        width: 60px;
+        height: 75px;
+        position: absolute;
+        top: -260%;
+    }
+
+    .publicite {
+        padding-top: 10rem;
+    }
+
+
+
+    .annonces {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 3rem;
+
+    }
+
+    .annonce1,
+    .annonce2,
+    .annonce3 {
+        width: 23rem;
+        height: 25rem;
+        background-color: rgb(218, 218, 218);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+
+    }
+
+    .annonce1:hover {
+        text-decoration: underline;
+    }
+
+    .annonce2:hover {
+        text-decoration: underline;
+    }
+
+    .annonce3:hover {
+        text-decoration: underline;
+    }
+
+    .annonce1 h2 {
+
+        padding: 0.2rem;
+    }
+
+    .annonce2 h2 {
+
+        padding: 0.2rem;
+    }
+
+    .annonce3 h2 {
+
+        padding: 0.2rem;
+    }
+
+    .annonce1 p {
+        font-family: lato light;
+        padding: 0.2rem;
+    }
+
+    .annonce2 p {
+        font-family: lato light;
+        padding: 0.2rem;
+    }
+
+    .annonce3 p {
+        font-family: lato light;
+        padding: 0.2rem;
+    }
+
+    .annonce1 img {
+        width: 23rem;
+        height: 17rem;
+    }
+
+    .annonce2 img {
+        width: 23rem;
+        height: 17rem;
+    }
+
+    .annonce3 img {
+        width: 23rem;
+        height: 17rem;
+    }
+
+    .shopNow {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+
+    }
+
+    .publicite h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+
+    }
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- pour les icones -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>SEPHORA</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="fleche-arriere">
+        <span class="material-icons fleche"> chevron_left</span>
+      </div>
+
+      <h1>SEPHORA</h1>
+
+      <div class="recherche">
+        <input type="text" class="barre-recherche" placeholder="Recherche..." />
+        <img src="images/loupe.svg" alt="" />
+      </div>
+
+      <div class="profil">
+        <div class="connexion">
+          <div class="bouton-connexion">
+            <p>Se connecter</p>
+            <img src="images/icons.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="interet">
+          <span class="material-icons clavardage">forum</span>
+          <span class="material-icons coeurs">favorite</span>
+          <span class="material-icons chariot">shopping_cart</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="barre-nav-principal">
+      <input type="checkbox" id="menu-burger" />
+      <label for="menu-burger" class="menu-barre-nav">
+        <span class="material-icons menu burger-ouvert">menu</span>
+        <span class="material-icons menu burger-fermer">menu_open</span>
+      </label>
+      <nav class="header-nav">
+        <a href="../../tp_annabelle/index.html">Accueil</a>
+        <a href="../index.htm">Maquillage</a>
+        <a href="">Soin Visage & Corps</a>
+        <a href="">Soins Cheveux</a>
+        <a href="">Parfums</a>
+        <a href="">Rabais</a>
+        <a href="">À propos</a>
+        <h1>SEPHORA</h1>
+      </nav>
+    </div>
+
+    <!----------------------MAIN------------------------------------>
+
+    <main>
+      <section class="info-produit">
+        <div class="information">
+          <h3>Make Up For Ever</h3>
+          <h4>Teint HD Skin</h4>
+          <div class="avis">
+            <span class="material-icons etoiles">star</span>
+            <span class="material-icons etoiles">star</span>
+            <span class="material-icons etoiles">star</span>
+            <span class="material-icons etoiles">star</span>
+            <span class="material-icons etoiles">star</span>
+
+            <p>(1000 avis)</p>
+          </div>
+          <p class="prix">$25.00</p>
+          <div class="format-produit">
+            <button class="format-standard">Format standart</button>
+            <button class="format-voyage">Format voyage</button>
+          </div>
+          <!-- on fait plusieurs choix dans une liste si on hover le bouton -->
+          <div class="plus-de-choix">
+            <button class="choix-nom-couleur">Primrose - rozy pink</button>
+            <div class="autre-choix">
+              <p>White Peach</p>
+              <p>Currant- Rosy Brown</p>
+              <p>Honeysuckle</p>
+            </div>
+          </div>
+
+          <div class="ajouter-panier">
+            <button>AJOUTER AU PANIER</button>
+          </div>
+
+          <!-- J'ai mis des div vides pour mettre les choix decouleurs plus facilement -->
+          <section class="couleur-choix">
+            <div class="couleur un-choix"></div>
+            <div class="couleur deux-choix"></div>
+            <div class="couleur trois-choix"></div>
+            <div class="couleur quatre-choix"></div>
+            <div class="couleur cinq-choix"></div>
+            <div class="couleur six-choix"></div>
+          </section>
+        </div>
+        <div><img src="images/image2.png" alt="" /></div>
+        
+      </section>
+      <section class="texte-produit">
+        <h2>Avantages</h2>
+        <hr />
+        <!-- avantages -->
+        <div class="avantage-produit">
+          <div class="logo vegan">
+            <img src="images/veganLogo.png" alt="Végan" />
+            <p>Végan</p>
+          </div>
+          <div class="logo test-animaux">
+            <img src="images/animalLogo.png" alt="Non-testé sur les animaux" />
+            <p>Non testé sur les animaux</p>
+          </div>
+          <div class="logo hydratant">
+            <img src="images/hydratantLogo.png" alt="Hydratant" />
+            <p>Hydratant</p>
+          </div>
+          <div class="logo repulpant">
+            <img src="images/levreLogo.jpg" alt="Repulpant" />
+            <p>Repulpant</p>
+          </div>
+          <div class="logo sans-gluten">
+            <img src="images/glutenLogo.png" alt="Sans gluten" />
+            <p>Sans gluten</p>
+          </div>
+          <div class="logo sans-parabene">
+            <img src="images/parabeneLogo.png" alt="Sans parabène" />
+            <p>Sans parabène</p>
+          </div>
+        </div>
+        <!-- Description -->
+        <div class="description-produit">
+          <h2>Description</h2>
+          <hr />
+          <p>
+            Ce baume, brillant, couleur et soin pour les lèvres repulpant
+            tout-en-un utilise le complexe Cushion Comfort XL pour un effet
+            repulpant visible sans picotement. Il hydrate et lisse grâce à
+            l’acide hyaluronique et aux superfruits. La formule crémeuse est
+            confortable, jamais collante, ni sèche. Il suffit de cliquer, de
+            glisser et de superposer pour obtenir une couleur plus pulpeuse et
+            plus juteuse. <br /><br />
+            <u>Formule sans:</u> <br /><br />
+            Parabènes, formaldéhydes, agents libérant des formaldéhydes,
+            phtalates, huile minérale, palmitate de rétinyle, oxybenzone,
+            goudron de houille, hydroquinone, sulfates (SLS et SLES),
+            triclocarban et triclosan, et contient moins d’un pour cent de
+            parfum synthétique. <br /><br />
+            <u>Avantage de ce produit:</u> <br /><br />
+            -Huile de Maracuja : Riche en acides gras essentiels et en vitamine
+            C pour des lèvres d'apparence plus lisse.
+            <br />
+            -Huile de Pépins de Raisin : Est connue pour atténuer les signes
+            visibles du vieillissement. <br />
+            -Goji : Favorise la production de collagène et contribue à maintenir
+            l'hydratation de la peau. <br />
+          </p>
+        </div>
+
+        <!-- Ingredient du produits -->
+        <input type="checkbox" name="" id="ingredient-minimiser" />
+        <label for="ingredient-minimiser">
+          <div class="bouton-ingredient">
+            <h2>Ingrédients</h2>
+            <span class="material-icons plus">add</span>
+          </div>
+        </label>
+        <div class="texte-ingredient">
+          <p>
+            Phytosteryl/Isostearyl/Cetyl/Stearyl/Behenyl Dimer
+            Dilinoleate,Diisostearyl Malate, Bis-Diglyceryl Polyacyladipate-2,
+            Polyglyceryl-2 Triisostearate, Hydrogenated Polyisobutene, Ceresin,
+            Menthone Glycerin Acetal, Microcrystalline Wax/Cera
+            Microcristallina/Cire Microcrystalline, Passiflora Edulis Seed Oil,
+            Passiflora Incarnata Fruit Extract, Vitis Vinifera (Grape) Seed Oil,
+            Flavor/Aroma, Citrullus Lanatus (Watermelon) Fruit Extract, Citrus
+            Limon (Lemon) Fruit Extract, Euterpe Oleracea Fruit Extract,
+            Fragaria Vesca (Strawberry) Fruit Extract,Lycium Barbarum Fruit
+            Extract, Malpighia Punicifolia (Acerola) Fruit Extract, Prunus
+            Persica (Peach) Fruit Extract, Punica Granatum Fruit Extract,
+            Vaccinium Angustifolium (Blueberry) Fruit Extract, Vaccinium
+            Macrocarpon (Cranberry) Fruit Extract, Tocopherol, 1,2- Hexanediol,
+            Ethylhexyl Palmitate, Trihydroxystearin, Sodium Hyaluronate, Benzyl
+            Benzoate, Tocopheryl Acetate, Benzyl Alcohol. (+/-):Titanium Dioxide
+            (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 7 Lake
+            (CI 15850), Yellow 6 Lake (CI 15985), Yellow 5 Lake (CI 19140), Red
+            28 Lake (CI 45410).
+          </p>
+        </div>
+      </section>
+
+      <section class="avis-client">
+        <h2>Avis</h2>
+        <hr />
+        <!-- Affichage de l'évaluation du produit  -->
+        <div class="nb-avis">
+          <h2>5.0</h2>
+          <div class="avis-bas">
+            <span class="material-icons etoiles">star</span>
+            <span class="material-icons etoiles">star</span>
+            <span class="material-icons etoiles">star</span>
+            <span class="material-icons etoiles">star</span>
+            <span class="material-icons etoiles">star</span>
+          </div>
+        </div>
+
+        <!-- bouton pour écrire un commentaire -->
+        <div class="ecrire-avis">
+          <button>ÉCRIRE UN AVIS</button>
+        </div>
+
+        <!-- Les commentaires affichées du produit  -->
+        <h5>20 commentaires</h5>
+
+        <div class="avis-client-un">
+          <div class="commentaire-client">
+            <div class="info-client">
+              <p>Samantha T.</p>
+              <!-- nombre d'étoiles que le client a attribuées -->
+              <div class="avis-info-client">
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+              </div>
+              <p class="verif-achat">Achat vérifié</p>
+            </div>
+            <div class="commentaire-ecrit">
+              <h4>À avoir absolument!</h4>
+              <p>Obsédée par ce produit!</p>
+            </div>
+            <p class="avis-utile">Cet avis vous a-t-il été utile ?</p>
+          </div>
+
+          <hr />
+        </div>
+        <div class="avis-client-deux">
+          <div class="commentaire-client">
+            <div class="info-client">
+              <p>Lalita R.</p>
+              <!-- nombre d'étoiles que le client a attribuées -->
+              <div class="avis-info-client">
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+              </div>
+              <p class="verif-achat">Achat vérifié</p>
+            </div>
+            <div class="commentaire-ecrit">
+              <h4>J'adore!</h4>
+              <p>
+                J'ai acheté la couleur Coquelicot et c'est une couleur
+                magnifique
+              </p>
+            </div>
+            <p class="avis-utile">Cet avis vous a-t-il été utile ?</p>
+          </div>
+
+          <hr />
+        </div>
+        <div class="avis-client-trois">
+          <div class="commentaire-client">
+            <div class="info-client">
+              <p>Kelli S.</p>
+              <!-- nombre d'étoiles que le client a attribuées -->
+              <div class="avis-info-client">
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+              </div>
+              <p class="verif-achat">Achat vérifié</p>
+            </div>
+            <div class="commentaire-ecrit">
+              <h4>À la hauteur de son nom.</h4>
+              <p>À la hauteur de son nom!</p>
+            </div>
+            <p class="avis-utile">Cet avis vous a-t-il été utile ?</p>
+          </div>
+
+          <hr />
+        </div>
+        <div class="avis-client-quatre">
+          <div class="commentaire-client">
+            <div class="info-client">
+              <p>Lindsay S.</p>
+              <!-- nombre d'étoiles que le client a attribuées -->
+              <div class="avis-info-client">
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+                <img src="images/star.svg" alt="" />
+              </div>
+              <p class="verif-achat">Achat vérifié</p>
+            </div>
+            <div class="commentaire-ecrit">
+              <h4>J'adore ce produit!</h4>
+              <p>Jolie couleur modulable qui tient bien la journée!</p>
+            </div>
+            <p class="avis-utile">Cet avis vous a-t-il été utile ?</p>
+          </div>
+
+          <hr />
+        </div>
+        <div class="nombre-page">
+          <span class="material-icons fleche-gauche">arrow_back_ios</span>
+          <p class="page-un">1</p>
+          <p class="page-deux">2</p>
+          <p class="suite-page">. . .</p>
+          <p class="derniere-page">11</p>
+          <span class="material-icons fleche-droite">arrow_forward_ios</span>
+        </div>
+      </section>
+    </main>
+
+    <!----------------------FOOTER----------------------------------->
+    <footer>
+      <h1>SEPHORA</h1>
+
+      <div class="info-footer">
+        <nav class="nav-footer">
+          <ul>
+            <h2>Information</h2>
+            <li>
+              <a href="">Boutique & Équipe</a>
+              <a href="">Aide</a>
+              <a href="">Politiques & Conditions</a>
+              <a href="">Remboursements</a>
+              <a href="">Services</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="recherche-footer">
+          <input type="text" class="barre-footer" placeholder="Recherche..." />
+        </div>
+        <div class="drapeau-langue">
+          <div class="americain-eng">
+            <img
+              src="images/americaFlag.svg"
+              alt="Drapeau américain"
+              width="64"
+            />
+            <p>English (USA)</p>
+          </div>
+          <div class="canada-eng">
+            <img
+              src="images/canadaFlag.svg"
+              alt="Drapeau canadien francais"
+              width="64"
+            />
+            <p>English (CAN)</p>
+          </div>
+          <div class="canada-fr">
+            <img
+              src="images/canadaFlag.svg"
+              alt="Drapeau canadien anglais"
+              width="64"
+            />
+            <p>Français (CAN)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy;2023 Sephora CAN, Inc. Tous droits réservés.
+      </div>
+    </footer>
+    <a href="#" class="material-icons btn-vers-haut">arrow_upward</a>
+    <script src="js/index.js"></script>
+  </body>
+</html>

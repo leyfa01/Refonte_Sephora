@@ -1,0 +1,875 @@
+
+/* ca permet que quand on appuie sur le bouton pour remonter la page, 
+la montée est adoucie  */
+html{
+  scroll-behavior: smooth; 
+ 
+}
+
+/*---------------- MOBILE FIRST ----------------------*/
+body {
+  width: 100%;
+  background-color: #fff;
+  overflow-x: hidden;
+  font-family: Lato light;
+  cursor: url(../images/cursor.png) 32 32, pointer;
+}
+/* pour donner une couleur au selection  */
+::selection{
+  background-color: #ff7372;
+  color: white;
+}
+/* ------------------------HEADER------------------------ */
+
+header {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  border-bottom: 1px #d6d6d6 solid;
+  padding-top: 4%;
+  padding-bottom: 0.5rem;
+  background-color: white;
+}
+a {
+  text-decoration: none;
+}
+
+.fleche {
+  position: relative;
+  top: 5%;
+}
+
+header div.recherche {
+  position: relative;
+  flex: 3 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div.recherche input.barre-recherche {
+  width: 70%;
+  height: 70%;
+  padding-left: 1rem;
+  border-radius: 25px;
+  background-color: #cecece;
+  border: none;
+}
+
+header div.recherche input.barre-recherche::placeholder {
+  font-family: Lato light;
+  letter-spacing: 0.1rem;
+}
+
+header div.recherche img {
+  position: relative;
+  margin-right: 1em;
+  width: 12px;
+  height: 12px;
+  right: 20px;
+}
+
+.interet {
+  display: flex;
+  flex-direction: row;
+  color: rgb(255, 171, 150);
+}
+
+.interet span {
+  width: 2rem;
+}
+
+/* Enlever dans le mobile la barre de recherche, barre de navigation 
+et le bouton de connexion dans le header */
+
+header h1,
+.barre-nav,
+.bouton-connexion {
+  display: none;
+}
+
+.barre-nav-principal {
+  position: relative;
+  z-index: 1;
+  background-color: #ffeeee86;
+  color: white;
+  /* height: 4rem; */
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+.header-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  z-index: -1;
+  background-color: #ffe2e2f5;
+  font-size: 1rem;
+  width: 50%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+.menu-barre-nav span {
+  color: rgb(37, 37, 37);
+  position: relative;
+  padding: 0.5rem;
+}
+.burger-fermer {
+  display: none;
+}
+#menu-burger:checked ~ .header-nav {
+  transform: translateX(0%);
+}
+
+#menu-burger:checked ~ .menu-barre-nav > .burger-ouvert {
+  display: none;
+  color: black;
+}
+
+#menu-burger:checked ~ .menu-barre-nav > .burger-fermer {
+  display: block;
+}
+
+#menu-burger {
+  display: none;
+}
+.header-nav a {
+  color: black;
+  font-family: Lato black;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  border-bottom: 1px solid #cecece;
+}
+
+.header-nav h1 {
+  color: black;
+  font-weight: lighter;
+  margin-top: 3rem;
+  position: relative;
+  left: 1rem;
+}
+/* ------------------------MAIN------------------------ */
+
+main {
+  background-color: #ffeeee86;
+  color: rgb(97, 97, 97);
+}
+
+p {
+  font-size: 0.75rem;
+}
+.format-produit{
+  display: none;
+}
+.choix-nom-couleur,
+.plus-de-choix{
+  display: none;
+}
+.info-produit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 1rem;
+  row-gap: 1rem;
+
+}
+
+.info-produit > div:last-of-type {
+  width: 12rem;
+  height: 24rem;
+}
+.info-produit > div:last-of-type img {
+  width: 100%;
+  height: 100%;
+}
+.information {
+  text-align: center;
+  margin-bottom: -10rem;
+}
+
+.information h3 {
+  font-family: lato black;
+  margin: 0;
+}
+
+.information h3:hover {
+  text-decoration: underline;
+}
+
+.information h4 {
+  font-size: 0.85rem;
+
+}
+
+.avis {
+  display: flex;
+  align-items: center;
+}
+
+.avis p {
+  font-weight: bold;
+}
+
+.avis p:hover {
+  text-decoration: underline;
+}
+
+.etoiles {
+  color: rgb(97, 97, 97);
+}
+
+.texte-produit {
+  font-family: Lato light;
+}
+
+.prix {
+  font-family: Lato black;
+  font-size: 1.2rem;
+  position: relative;
+  top: 25rem;
+}
+
+/* couleur choix */
+
+.couleur-choix {
+  position: relative;
+  top: 25rem;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 4rem;
+}
+/* tous les choix de couleur ont les meme propriétés juste des couleurs differente */
+.un-choix,
+.deux-choix,
+.trois-choix,
+.quatre-choix,
+.cinq-choix,
+.six-choix{
+  width: 32px;
+  height: 32px;
+  border-radius: 25%;
+}
+/* Changer les couleurs a chaque choix */
+.un-choix {
+  background-color: rgb(255, 247, 233);
+}
+.deux-choix {
+  background-color: rgb(253, 232, 199);
+}
+.trois-choix {
+  background-color: rgb(241, 214, 170);
+}
+.quatre-choix {
+  background-color: rgb(219, 194, 153);
+}
+.cinq-choix {
+  background-color: rgb(85, 60, 22);
+}
+.six-choix {
+  background-color: rgb(61, 40, 6);
+}
+
+/* faire fixer le bouton panier au milieu */
+.ajouter-panier {
+  text-align: center;
+  position: relative;
+  position: fixed;
+  z-index: 1;
+  bottom: 2rem;
+}
+.ajouter-panier button {
+  font-family: Lato Black;
+  border: none;
+  background-color: #ff4545;
+  color: white;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 20px;
+}
+
+/* Arranger les differents texte present dans cette section */
+.texte-produit {
+  margin: 1rem;
+  margin-top: 10rem;
+}
+
+/* Description du produits */
+.description-produit h2,
+.bouton-ingredient h2,
+.texte-produit h2,
+.avis-client h2 {
+  font-family: Lato Black;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Les avantages du produits */
+.avantage-produit {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 2rem;
+}
+.avantage-produit .logo {
+  width: 31%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1rem;
+}
+.avantage-produit img {
+  width: 45px;
+  height: 45px;
+}
+.avantage-produit p {
+  font-weight: 600;
+}
+.avantage-produit p:hover {
+  text-decoration: underline;
+}
+
+/* Les descriptions du produits */
+.description-produit p,
+.texte-produit p {
+  margin: 1rem;
+}
+
+/* Les ingrédients du produits */
+.bouton-ingredient {
+  background-color: #ffeeee86;
+  border: none;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  outline: 0px;
+  border-bottom: 1px #cecece solid;
+  margin-top: 2rem;
+}
+#ingredient-minimiser {
+  display: none;
+}
+.texte-ingredient {
+  max-height: 100%;
+  overflow: hidden;
+  transition: max-height 0.5ms ease-in-out;
+}
+
+.plus {
+  transform: rotate(45deg);
+  transition: transform 0.2ms ease;
+}
+
+#ingredient-minimiser:checked + label + .texte-ingredient {
+  max-height: 0;
+}
+
+/* ------------avis et commentaires en bas de la page---------------- */
+
+/* on fait reapparaitre les aviis qu'ona a enlever dans la version mobile */
+.avis-client-deux,
+.avis-client-quatre{
+  display: none;
+  }
+.avis-client {
+  margin: 1rem;
+}
+
+.avis-client h2 {
+  text-align: center;
+}
+.nb-avis h2 {
+  font-size: 2rem;
+}
+.avis-bas {
+  text-align: center;
+}
+/* Faire le bouton Écrire un avis */
+.ecrire-avis {
+  text-align: center;
+  position: relative;
+  top: 1rem;
+}
+.ecrire-avis button {
+  font-family: Lato Black;
+  border: none;
+  background-color: #ff7372;
+  color: white;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 15px;
+}
+/* Arranger les commentaires */
+.avis-client h5 {
+  font-weight: lighter;
+  margin-top: 3rem;
+}
+.commentaire-client {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 1rem;
+}
+.commentaire-client p {
+  font-weight: bold;
+}
+.avis-info-client {
+  display: flex;
+}
+.avis-info-client img {
+  width: 16px;
+  height: 16px;
+  gap: -10px;
+}
+.verif-achat {
+  font-weight: bolder;
+  color: rgb(0, 214, 25);
+}
+.commentaire-ecrit {
+  position: relative;
+  top: -5px;
+}
+.commentaire-ecrit h4 {
+  font-family: Lato;
+  font-size: smaller;
+}
+.avis-utile {
+  margin-top: 5rem;
+  font-size: 0.6rem;
+}
+/* Mettre le nombre de page de commentaires */
+.nombre-page {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  font-size: 2rem;
+  color: #ff7372;
+}
+.nombre-page p {
+  font-size: 1.1rem;
+  font-family: Lato Black;
+}
+
+/* --------------------Le footer ----------*/
+footer {
+  background-color: black;
+  height: 100%;
+}
+.info-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer h1 {
+  font-size: 3rem;
+  margin-left: 1.5rem;
+  position: relative;
+  top: 1rem;
+}
+
+footer h1,
+footer h2,
+.nav-footer a,
+footer p {
+  color: white;
+  font-weight: lighter;
+}
+footer h2,
+.nav-footer a {
+  margin: 0.5rem;
+}
+
+footer h2 {
+  text-decoration: underline;
+}
+
+.nav-footer ul {
+  padding-left: 1rem;
+  margin-top: 0;
+}
+
+.nav-footer li {
+  display: flex;
+  flex-direction: column;
+}
+footer p {
+  text-align: center;
+}
+
+.recherche-footer {
+  position: relative;
+  top: 5%;
+}
+.recherche-footer input.barre-footer {
+  width: 70%;
+  padding-left: 1rem;
+  border-radius: 25px;
+  background-color: #3e3e3e;
+  border: none;
+}
+
+.recherche-footer input.barre-footer::placeholder {
+  font-family: Lato light;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+}
+
+.recherche-footer img {
+  position: relative;
+  margin-right: 1em;
+  width: 12px;
+  height: 12px;
+  right: 20px;
+}
+.drapeau-langue {
+  width: 3rem;
+  position: relative;
+  bottom: 10rem;
+  left: 100%;
+  display: grid;
+}
+.americain-eng,
+.canada-eng,
+.canada-fr{
+  display: flex;
+}
+.copyright{
+  text-align: center;
+  color: white;
+}
+.btn-vers-haut{
+  position: fixed;
+  right: 3%;
+  bottom: 2rem;
+  padding: 0.6rem;
+  border-radius: 25px;
+  background-color: #ff7372;
+  color: white;
+  box-shadow: 5px 5px 10px #942323;
+}
+/* ---------------------------CHANGEMENT DE RESOLUTIONS DESKTOP VERSION------------------- */
+@media screen and (min-width: 1000px) {
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  header h1 {
+    display: flex;
+    font-size: 2.5rem;
+    flex: 2 0 auto;
+    margin-left: 4rem;
+    font-family: lato light;
+    letter-spacing: 0.4rem;
+  }
+  header div.profil {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .fleche,
+  .menu-barre-nav {
+    display: none;
+  }
+  .header-nav {
+    position: static;
+    width: 100%;
+    height: 5vh;
+    flex-direction: row;
+    column-gap: 1rem;
+
+    transform: none;
+    transition: none;
+  }
+
+
+  .header-nav > a {
+    height: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    font-family: Lato light;
+    position: relative;
+    transform: none;
+    margin: 0;
+    border: none;
+    
+  }
+  .header-nav a:hover{
+    animation: changementCouleur 0.5s forwards;
+  }
+  @keyframes changementCouleur {
+    0%{
+      background-color: #ffa1a1;
+      border-radius: 50px;
+    }
+    50%{
+      background-color: #ff7372;
+      font-size: 1.2rem;
+      color: #ffa1a1;
+      border-radius: 25px;
+    }
+    100%{
+      background-color: #ff5353;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 5px;
+    }
+  }
+  .header-nav h1 {
+    display: none;
+  }
+
+  header div.recherche input.barre-recherche {
+    width: 100%;
+    height: 30%;
+    padding-left: 1em;
+    border-radius: 25px;
+    background-color: #e4e1e1;
+    border: none;
+  }
+  .bouton-connexion {
+    height: 60%;
+    width: 100%;
+    /* background-color: beige; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    max-width: 10em;
+    font-family: Lato light;
+    gap: 1rem;
+  }
+  .bouton-connexion p {
+    font-size: 1.5rem;
+  }
+  .bouton-connexion img {
+    width: 20px;
+    height: 20px;
+  }
+  .bouton-connexion:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  /* -------------- main---------------------- */
+  main{
+    padding: 2rem;
+  }
+  P {
+    font-size: 1rem;
+  }
+  .description-produit h2,
+  .bouton-ingredient h2,
+  .texte-produit h2,
+  .avis-client h2 {
+    font-size: 1.5rem;
+  }
+  /* au lieu que les informations soit en haut de l'images, les informations 
+  sont a cote de l'images  */
+  .info-produit {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+ 
+  }
+  .info-produit img {
+    width: 100%;
+    height: 100%;
+    margin-left: -3rem;
+    margin-right: 3rem;
+  }
+
+  .information {
+    text-align: initial;
+    position: relative;
+    bottom: 5rem;
+  }
+  .prix {
+    position: relative;
+    top: 0;
+  }
+  .autre-choix p{
+   
+    border: 1px black solid;
+    height: 2.5rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    background-color: #ffeeee;
+  }
+  .autre-choix p:hover{
+    background-color: #ff5353;
+    color: white;
+    font-weight: bold;
+  }
+  .autre-choix {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width:30em;
+  }
+  .plus-de-choix{
+    display: block;
+  }
+  .plus-de-choix:hover .autre-choix {
+    display: block;
+  }
+  /* Arrondir plus les choix de couleur  */
+  .un-choix,
+  .deux-choix,
+  .trois-choix,
+  .quatre-choix,
+  .cinq-choix,
+  .six-choix {
+    border-radius: 50px;
+  }
+  /* ----- faire apparaitre les choix de formats et liste de couleur---- */
+  .format-produit{
+    display: block;
+  }
+  /* choix de couleur en liste */
+  .choix-nom-couleur{
+    display: block;
+  }
+  /* panier */
+  /* le mettre en bas des informations du produits  */
+  .ajouter-panier{
+    position: relative;
+    left: auto;
+    top: 6rem;
+    z-index: 0;
+  }
+
+  .ajouter-panier button{
+    background-color: #ff2f2f;
+    font-family: Lato black;
+    width: 100%;
+    
+  }
+  .ajouter-panier button:hover{
+    background-color: #942323;
+    
+    
+  }
+ /* -- mettre plus de style au bouton de format-- */
+ .format-produit{
+  display: flex;
+  gap: 1rem;
+ }
+ .format-standard,
+ .format-voyage{
+  height: 3rem;
+  width: 15rem;
+  margin-bottom: 1rem;
+  position: relative;
+  background-color: white;
+  font-family: Lato light;
+  
+ }
+ .format-standard:hover,
+ .format-voyage:hover{
+  background-color: rgb(255, 207, 207);
+  font-family: Lato black;
+ }
+ .choix-nom-couleur{
+  width: 31rem;
+  height: 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.choix-nom-couleur:hover{
+  background-color: rgb(255, 207, 207);
+  font-family: Lato black;
+}
+
+ .couleur-choix{
+    display: flex;
+    justify-content: flex-start;
+    top: auto;
+    position: relative;
+    gap: 20px;
+    
+  }
+ 
+  /* texte des produits  */
+  /* je changes les tailles et le margin des texte pour pas que ca prend tout le sites */
+
+  .commentaire-ecrit h4 {
+    font-family: Lato;
+    font-size: large;
+}
+  .texte-produit p{
+    font-size: 1rem;
+    font-family: Lato Regular;
+  }
+  .texte-produit ,
+  .avis-client {
+    margin: 10%;
+    margin-top: 5%;
+    
+  }
+  .avantage-produit {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 20px;
+    display: flex;
+    margin: 4rem;
+  }
+  
+  .avantage-produit img {
+    width: 64px;
+    height: 64px;
+  }
+  .texte-ingredient{
+    margin: 1rem;
+  }
+  /* AVIS DES CLIENTS APRES LES TEXTES DES PRODUITS */
+  /* on efface certain avis pour laisser de la place */
+  .avis-client-deux,
+  .avis-client-quatre{
+    display: block;
+  }
+  .nb-avis h2{
+    font-size: 2.5rem;
+  }
+  .commentaire-client{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  .commentaire-client p{
+    font-size: 1rem;
+  }
+  /* Footer */
+  footer{
+    padding: 2rem;
+  }
+  footer h1{
+    margin-top: 0;
+  }
+  .drapeau-langue{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .copyright{
+    text-align: initial;
+  }
+}
