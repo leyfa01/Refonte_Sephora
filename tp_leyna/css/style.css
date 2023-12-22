@@ -646,7 +646,8 @@ footer div.footerInfo div.supportSephora div.rechercheSephora {
 /********************** FOOTER **********************/
 
     footer {
-        height: 80vh
+        height: 80vh;
+	cursor: initial;
     }
     footer div.footerHead {
         flex: 3 0 0;
